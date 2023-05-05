@@ -1,9 +1,13 @@
 import java.util.Scanner;
 
-class Main
-{
-    public static void main(String[] args)
-    {
+class Main {
+    public static void main(String[] args) { // Функции пульта управления
+
+        getScanner();
+        getVariables();
+    }
+
+    public static void getScanner() {
         Scanner enter = new Scanner(System.in);
 
         System.out.print("Please enter you name: ");
@@ -22,6 +26,15 @@ class Main
         String weight = enter.nextLine();
         System.out.println("You weight is: " + "79");
 
+        enter.close(); // закрыл ресурс
+    }
 
+    public static void getVariables()
+    {
+        char mySymbol = 'C';
+        char mySymbola = 'a';
+        System.out.println("My letter C - " + (int)mySymbol);
+        System.out.println("My letter a - " + (int)mySymbola);
     }
 }
+
