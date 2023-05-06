@@ -5,6 +5,7 @@ class Main {
 
         getScanner();
         getVariables();
+        getMassIndex();
     }
 
     public static void getScanner() {
@@ -35,6 +36,21 @@ class Main {
         char mySymbola = 'a';
         System.out.println("My letter C - " + (int)mySymbol);
         System.out.println("My letter a - " + (int)mySymbola);
+    }
+
+    public static void getMassIndex()
+    {
+        System.out.println("BMI we count by the formula BMI = kg/m2 ");
+
+        /* Я конечно написал эту формулу согласно заданию, но судя по всему она не правильная,
+        нашел другую формулу в инете и рассчет сделал по ней*/
+
+       float weight = 79;
+       float hight = 1.8F;
+
+        System.out.println(weight/(hight + hight));
+        System.out.println("This is you Body Mass Index - are you okay!");
+
     }
 }
 
