@@ -1,73 +1,37 @@
 import java.util.Scanner;
 
 class Main {
-    public static void main(String[] args) { // Функции пульта управления
+    public static void main(String[] args) {
 
-        //getPersonalData();
-        //convertToChar();
-        getMassIndex();
+        getMonthNumber();
     }
+    public static void getMonthNumber() {
+        Scanner count = new Scanner(System.in);
 
-    public static void getPersonalData()
-    {
-        Scanner enter = new Scanner(System.in);
+        System.out.print("Please enter month number: ");
 
-        System.out.print("Please enter you name: ");
-        String name = enter.nextLine();
+        int month = count.nextInt();
 
-        System.out.print("Please enter you surname: ");
-        String surname = enter.nextLine();
+        System.out.print("You season is: ");
 
-        System.out.print("Please enter you age: ");
-        int age = enter.nextInt();
+        switch (month) {
+            case 12: case 1: case 2:
+                System.out.println("winter");
 
-        System.out.print("Please enter you height: ");
-        int height = enter.nextInt();
+                break; case 3: case 4: case 5:
+                System.out.println("spring");
 
-        System.out.print("Please enter you weight: ");
-        Double weight = enter.nextDouble();
+                break; case 6: case 7: case 8:
+                System.out.println("summer");
 
-
-        System.out.println("You name is: " + name);
-        System.out.println("You surname is: " + surname);
-        System.out.println("You age is: " + age);
-        System.out.println("You height is: " + height);
-        System.out.println("You weight is: " + weight);
-
-
-    }
-
-    public static void convertToChar()
-    {
-        Scanner convert = new Scanner(System.in);
-
-        System.out.print("Please enter you symbol: ");
-        char symbol = (char) convert.nextInt();
-        System.out.println("You have entered the symbol: " + symbol);
-        System.out.println("This symbol numeric is: " + (int) symbol);
-
-    }
-
-    public static void getMassIndex()
-    {
-    Scanner BMI = new Scanner(System.in);
-
-        System.out.println("BMI we count by the formula BMI = kg/m2 ");
-
-        System.out.print("Please enter you weight: ");
-        double weight = BMI.nextDouble();
-
-        System.out.print("Please enter you height: ");
-        int height = BMI.nextInt();
-
-        System.out.print("You BodyMassIndex is: " + weight /(height * height / 10000));
-        double formula = BMI.nextDouble();
-
-      BMI.close(); //закрыл ресурс
-
-        // вроде все ошибки исправил
+                break; case 9: case 10: case 11:
+                System.out.println("autumn");
+                break;
+            default:
+                System.out.println("This is unknown month... ");
+                break;
+        }
 
 
     }
 }
-
